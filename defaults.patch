@@ -1,0 +1,14 @@
+Extending the CFLAGS to include debug options from clr defaults
+
+diff -ru zopfli-64c6f362fefd56dccbf31906fdb3e31f6a6faf80/Makefile zopfli-new/Makefile
+--- zopfli-64c6f362fefd56dccbf31906fdb3e31f6a6faf80/Makefile	2017-07-07 11:57:52.000000000 +0000
++++ zopfli-new/Makefile	2017-10-19 18:23:22.707774963 +0000
+@@ -1,7 +1,7 @@
+ CC = gcc
+ CXX = g++
+ 
+-CFLAGS = -W -Wall -Wextra -ansi -pedantic -lm -O2 -Wno-unused-function
++CFLAGS = -W -Wall -Wextra -ansi -pedantic -lm -O2 -Wno-unused-function $(DEFAULTFLAGS)
+ CXXFLAGS = -W -Wall -Wextra -ansi -pedantic -O2
+ 
+ ZOPFLILIB_SRC = src/zopfli/blocksplitter.c src/zopfli/cache.c\
