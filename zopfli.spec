@@ -4,7 +4,7 @@
 #
 Name     : zopfli
 Version  : 64636256319063316680
-Release  : 4
+Release  : 5
 URL      : https://github.com/google/zopfli/archive/64c6f362fefd56dccbf31906fdb3e31f6a6faf80.tar.gz
 Source0  : https://github.com/google/zopfli/archive/64c6f362fefd56dccbf31906fdb3e31f6a6faf80.tar.gz
 Summary  : No detailed summary available
