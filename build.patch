@@ -8,8 +8,8 @@
 +install:
 +	mkdir -p $(DESTDIR)/usr/lib64
 +	mkdir -p $(DESTDIR)/usr/include
-+	cp libzopfli.so.1.0.1 $(DESTDIR)/usr/lib64
-+	ln -s libzopfli.so.1.0.1  $(DESTDIR)/usr/lib64/libzopfli.so
-+	ln -s libzopfli.so.1.0.1  $(DESTDIR)/usr/lib64/libzopfli.so.1
++	cp libzopfli.so.1.0.2 $(DESTDIR)/usr/lib64
++	ln -s libzopfli.so.1.0.2  $(DESTDIR)/usr/lib64/libzopfli.so
++	ln -s libzopfli.so.1.0.2  $(DESTDIR)/usr/lib64/libzopfli.so.1
 +	cp src/zopfli/zopfli.h $(DESTDIR)/usr/include
 \ No newline at end of file
