@@ -4,7 +4,7 @@
 #
 Name     : zopfli
 Version  : 1.0.3
-Release  : 7
+Release  : 8
 URL      : https://github.com/google/zopfli/archive/zopfli-1.0.3/zopfli-1.0.3.tar.gz
 Source0  : https://github.com/google/zopfli/archive/zopfli-1.0.3/zopfli-1.0.3.tar.gz
 Summary  : No detailed summary available
@@ -66,20 +66,20 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1579032587
+export SOURCE_DATE_EPOCH=1619063557
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %cmake ..
-make  %{?_smp_mflags}  VERBOSE=1
+make  %{?_smp_mflags}  libzopfli DEFAULTFLAGS="$CFLAGS"
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1579032587
+export SOURCE_DATE_EPOCH=1619063557
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/zopfli
 cp %{_builddir}/zopfli-zopfli-1.0.3/COPYING %{buildroot}/usr/share/package-licenses/zopfli/6d182cfd7e2a6c633140f7cdb0c4a46fc4a23589
